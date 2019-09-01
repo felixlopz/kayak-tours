@@ -11,7 +11,9 @@
 
 // MEDIA QUERY MANAGER
 /*
-0-600px:  Phone
+
+0-375px: phone-small
+375-600px:  Phone
 600-900px: Tablet Portrait
 900-1200: Tablet Landscape
 [1200-1800px] is where our normal styles apply
@@ -25,6 +27,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px;
 */
 @mixin respond($breakpoint) {
+  @if $breakpoint == phone-small {
+    @media only screen and (max-width: 23.43em) {
+      @content;
+    } // 375px
+  }
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;

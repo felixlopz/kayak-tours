@@ -1,4 +1,16 @@
 .row {
   width: $grid-width;
   margin: 0 auto;
+
+  @include respond(tab-land) {
+    width: 85rem;
+  }
+  @include respond(tab-port) {
+    width: 55rem;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    padding: 0 1.5em;
+  }
 }
