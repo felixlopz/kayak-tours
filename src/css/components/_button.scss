@@ -1,3 +1,71 @@
 // -----------------------------------------------------------------------------
 //* This file contains all styles related to the button components.
 // -----------------------------------------------------------------------------
+.btn {
+  &,
+  &:active,
+  &:focus {
+    position: relative;
+    overflow: hidden;
+    color: $color-white;
+    background-image: linear-gradient(
+      90deg,
+      $color-grey-light,
+      $color-grey-light 50%,
+      $color-white 0
+    );
+    background-size: 220%;
+    background-position: 0;
+    border: none;
+    outline: none;
+    padding: 0.8em 1.3em;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &--primary {
+    &,
+    &:active,
+    &:focus {
+      background: $color-primary-light;
+    }
+  }
+
+  &--large {
+    &,
+    &:active,
+    &:focus {
+      font-size: 2.2rem;
+      padding: 0.7em 3em;
+    }
+  }
+
+  &--animated {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color-white, 0.4);
+      border-radius: 4px;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+      transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+      z-index: 1;
+    }
+    &:hover,
+    &:focus {
+      transform: translateX(1rem);
+      &::after,
+      &::before {
+        transform: translateX(0);
+      }
+    }
+  }
+}
