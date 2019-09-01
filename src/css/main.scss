@@ -9,10 +9,10 @@
 @import "base/base", "base/typography", "base/reset", "base/animations";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer";
+@import "layout/header", "layout/footer", "layout/grid", "layout/navigation";
 
 // 5. Components
-@import "components/button";
+@import "components/button", "components/logo";
 
 // 6. Page-specific styles
 @import "pages/home";

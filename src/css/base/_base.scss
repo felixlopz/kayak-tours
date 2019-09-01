@@ -30,3 +30,8 @@ body {
 img {
   width: 100%;
 }
+
+::selection {
+  background: $color-primary-light;
+  color: $color-white;
+}

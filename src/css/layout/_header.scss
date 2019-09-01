@@ -3,50 +3,24 @@
 // -----------------------------------------------------------------------------
 
 .header {
-  position: relative;
-  height: 100vh;
   width: 100%;
-  margin: 0;
-  background-image: url("/img/header.jpg");
-  background-position: bottom;
+  min-height: 100vh;
+  background-image: url("../assets/background.jpg");
   background-size: cover;
+  background-position: center;
 
-  &__logo-box {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+  &__hero {
+    margin-top: 3em;
+
+    & button {
+      animation: appear 0.8s;
+    }
   }
-
-  &__logo {
-    height: 3.5rem;
-  }
-  &__navbar {
-    text-decoration: none;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: transparent;
-    overflow: hidden;
-    text-align: center;
-    backface-visibility: hidden;
-    animation: fromTop 1.7s ease-in-out;
-
-    & ul {
-      list-style-type: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-    & li {
-      font-size: 0.7rem;
-      margin: 0.3rem;
-      font-weight: 400;
-    }
-    & a {
-      text-decoration: none;
-      color: $color-white;
-      transition: all 0.3s;
-    }
+  &__text {
+    color: $color-white;
+    font-size: 7.2rem;
+    text-transform: uppercase;
+    animation: moveInRight 1.2s ease-out;
+    margin-bottom: 1em;
   }
 }
