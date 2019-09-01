@@ -1,0 +1,15 @@
+.logo-box {
+  width: 200px;
+
+  &--nav {
+    width: 60px;
+  }
+}
+
+.logo-text {
+  margin-left: 0.5em;
+  color: $color-white;
+  font-weight: $bold;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
