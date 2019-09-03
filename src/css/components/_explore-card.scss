@@ -3,44 +3,47 @@
   display: flex;
 
   &--left {
-    position: relative;
-    align-items: center;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 20%;
-      width: calc(80% + ((100vw - 114rem) / 2));
-      height: 91%;
-      z-index: 1;
-      background: $color-blue-darker;
-    }
+    align-items: flex-end;
   }
 
   &--right {
-    position: relative;
     justify-content: flex-end;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -40%;
-      left: 20%;
-      width: calc(80% + ((100vw - 114rem) / 2));
-      height: 150%;
-      z-index: 1;
-      background: $color-blue-darker;
-    }
   }
 
   &__box {
-    z-index: 2;
-    width: 32rem;
+    z-index: 1;
+    width: 40rem;
+    position: relative;
+    padding-bottom: 3em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      height: 100%;
+      width: calc(160% + ((100vw - 114rem) / 2));
+      height: 150%;
+      z-index: -1;
+      background: $color-blue-darker;
+    }
+
+    &--right {
+      &::before {
+        left: -60%;
+      }
+    }
+
+    &--left {
+      &::before {
+        right: -60%;
+      }
+    }
   }
 
   &__heading {
     display: inline-block;
     font-weight: $medium;
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     padding: 1rem 2rem 2rem 3rem;
     position: relative;
@@ -81,7 +84,8 @@
 
   &__paragraph {
     color: $color-grey-dark;
-    line-height: 22px;
+    line-height: 25px;
+    font-size: 2rem;
 
     &:not(:last-child) {
       margin-bottom: 2em;

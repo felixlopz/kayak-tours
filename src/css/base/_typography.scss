@@ -8,8 +8,9 @@ body {
 }
 
 .heading {
-  $width-triangle: 2rem;
+  $width-triangle: 2.5rem;
   &--primary {
+    font-size: 5rem;
     font-weight: $bold;
     text-transform: uppercase;
     position: relative;
