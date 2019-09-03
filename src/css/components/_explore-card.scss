@@ -1,0 +1,90 @@
+.explore-card {
+  color: $color-white;
+  display: flex;
+
+  &--left {
+    position: relative;
+    align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 20%;
+      width: calc(80% + ((100vw - 114rem) / 2));
+      height: 91%;
+      z-index: 1;
+      background: $color-blue-darker;
+    }
+  }
+
+  &--right {
+    position: relative;
+    justify-content: flex-end;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: 20%;
+      width: calc(80% + ((100vw - 114rem) / 2));
+      height: 150%;
+      z-index: 1;
+      background: $color-blue-darker;
+    }
+  }
+
+  &__box {
+    z-index: 2;
+    width: 32rem;
+  }
+
+  &__heading {
+    display: inline-block;
+    font-weight: $medium;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem 2rem 3rem;
+    position: relative;
+    line-height: 40px;
+    margin-bottom: 1.4em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1.2rem;
+      background-color: $color-primary-light;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      height: 1.2rem;
+      background-color: $color-primary-light;
+    }
+
+    &--right {
+      padding-left: 0;
+      &::before {
+        left: auto;
+        right: 0;
+      }
+      &::after {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  &__paragraph {
+    color: $color-grey-dark;
+    line-height: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+}

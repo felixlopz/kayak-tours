@@ -6,3 +6,33 @@ body {
   font-family: "Montserrat", sans-serif;
   color: $color-blue-dark;
 }
+
+.heading {
+  $width-triangle: 2rem;
+  &--primary {
+    font-weight: $bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 3rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: transparent;
+      width: 0;
+      height: 0;
+      border-top: ($width-triangle - 0.5rem) solid transparent;
+      border-bottom: ($width-triangle - 0.5rem) solid transparent;
+      left: -3rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--dark {
+    color: $color-blue-dark;
+    &::before {
+      border-left: $width-triangle solid $color-blue-darker;
+    }
+  }
+}
