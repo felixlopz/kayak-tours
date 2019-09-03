@@ -41,14 +41,14 @@
     &--left {
       width: 80%;
       position: absolute;
-      bottom: -10rem;
+      bottom: -8rem;
       img:not(:last-child) {
-        margin-bottom: 5em;
+        margin-bottom: 2em;
       }
     }
     &--right {
       width: 60%;
-      margin-top: -8rem;
+      margin-top: -10rem;
       img:not(:last-child) {
         margin-bottom: 2em;
       }
