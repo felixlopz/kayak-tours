@@ -154,12 +154,12 @@
     }
   }
   &__item-description {
+    align-self: flex-start;
     font-weight: $medium;
     font-size: 2.1rem;
     color: $color-grey-dark;
     @include respond(tab-land) {
       font-size: 1.8rem;
-      align-self: flex-start;
     }
 
     @include respond(phone-small) {
