@@ -3,11 +3,16 @@
 // -----------------------------------------------------------------------------
 .explore {
   margin-top: 6em;
+
+  @include respond(tab-port) {
+    text-align: center;
+    margin-top: 0;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 10em;
-
+    grid-row-gap: 5rem;
     & .explore__intro-box {
       grid-column: 1/3;
       position: relative;
@@ -24,31 +29,50 @@
       display: flex;
       justify-content: flex-end;
     }
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &__intro-box {
-    width: 45rem;
+    width: 48rem;
   }
 
   &__intro {
-    font-size: 3.5rem;
+    font-size: 3.6rem;
     font-weight: $medium;
     color: $color-grey-dark;
+    width: 44.4rem;
     line-height: 40px;
+
+    @include respond(tab-land) {
+      font-size: 2.4rem;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__gallery-box {
+    width: 40rem;
+
+    @include respond(tab-land) {
+      width: 37rem;
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
+
     &--left {
-      width: 80%;
       position: absolute;
-      bottom: -8rem;
+      bottom: -2rem;
       img:not(:last-child) {
         margin-bottom: 2em;
       }
     }
     &--right {
-      width: 60%;
-      margin-top: -10rem;
       img:not(:last-child) {
         margin-bottom: 2em;
       }
