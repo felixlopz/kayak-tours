@@ -1,0 +1,184 @@
+.tour-card {
+  max-width: 35rem;
+  background: $color-white;
+  box-shadow: 0.2rem 0.4rem 1rem rgba($color-black, 0.2);
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.08);
+
+    @include respond(tab-port) {
+      transform: scale(1);
+    }
+  }
+
+  &__header {
+    background-size: cover;
+    background-position: center;
+    padding: 1.5em 1.18em 1.5em 1.18em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-100%);
+      background: rgba($color-blue-darker, 0.8);
+      z-index: 1;
+      transition: all 0.3s;
+    }
+
+    @include respond(tab-port) {
+      padding: 0;
+      height: 18rem;
+    }
+    @include respond(tab-port) {
+      padding: 0;
+      height: rem;
+    }
+  }
+
+  &__description {
+    z-index: 2;
+    opacity: 0;
+    font-size: 1.8rem;
+    font-weight: $medium;
+    color: $color-white;
+    line-height: 24px;
+    margin-bottom: 1em;
+    text-align: center;
+    transition: all 0.3s 0.3s;
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+      line-height: 22px;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__header-btn {
+    &,
+    &:focus,
+    &:active {
+      z-index: 2;
+      opacity: 0;
+      font-size: 1.7rem;
+      padding: 0.5em 1em;
+      transition: all 0.3s, opacity 0.3s 0.3s;
+    }
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &:hover &__description,
+  &:hover &__header-btn {
+    opacity: 1;
+  }
+  &:hover &__header::after {
+    transform: translateY(0);
+    @include respond(tab-port) {
+      transform: translateY(-100%);
+    }
+  }
+
+  &__body {
+    padding: 2.8125em 1.875em;
+
+    @include respond(tab-land) {
+      padding: 1.4em 1.2em;
+    }
+    @include respond(tab-port) {
+      padding: 1em 0.8em;
+    }
+  }
+
+  &__name {
+    font-size: 2.4rem;
+    color: $color-blue;
+    font-weight: $bold;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+    @include respond(phone-small) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__details {
+    margin-top: 1.875em;
+
+    @include respond(tab-port) {
+      margin-top: 1em;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 1.2em;
+
+      @include respond(tab-port) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  &__icon-box {
+    margin-right: 1em;
+    width: 2.5rem;
+
+    @include respond(tab-land) {
+      width: 2rem;
+    }
+    @include respond(tab-port) {
+      width: 1.6rem;
+    }
+    @include respond(phone-small) {
+      margin-right: 0.6rem;
+    }
+  }
+  &__item-description {
+    font-weight: $medium;
+    font-size: 2.1rem;
+    color: $color-grey-dark;
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+      align-self: flex-start;
+    }
+
+    @include respond(phone-small) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__price {
+    color: $color-secondary-light;
+  }
+
+  &__body-btn {
+    display: none;
+    @include respond(tab-port) {
+      width: 50%;
+      display: block;
+      margin: 2em auto 0.8em auto;
+      font-size: 1.2rem;
+      box-shadow: 0.1rem 0.2rem 0.8rem 0rem rgba($color-black, 0.2);
+    }
+  }
+}

@@ -51,4 +51,10 @@ body {
       border-left: $width-triangle solid $color-blue-darker;
     }
   }
+  &--white {
+    color: $color-blue-white;
+    &::before {
+      border-left: $width-triangle solid $color-blue-white;
+    }
+  }
 }

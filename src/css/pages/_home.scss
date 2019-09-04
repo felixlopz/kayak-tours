@@ -79,3 +79,40 @@
     }
   }
 }
+
+.tours {
+  margin: 7.5em 0;
+  padding: 4.8em 0;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  @include respond(tab-port) {
+    padding: 3.5em 0;
+  }
+
+  &__heading-box {
+    @include respond(tab-port) {
+      & > * {
+        margin: 0;
+      }
+
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    margin-top: 5.3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
+    grid-gap: 2.8em;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      margin-top: 3em;
+    }
+  }
+}
