@@ -199,7 +199,7 @@
 
 .contact {
   margin-top: 7.5em;
-  padding: 3.625rem 0;
+  padding: 4.8em 0;
   background: $color-blue-darker;
 
   background-image: linear-gradient(
@@ -219,6 +219,10 @@
   }
 
   &__heading-box {
+    & > * {
+      margin-top: 0;
+    }
+
     @include respond(tab-port) {
       display: flex;
       justify-content: center;

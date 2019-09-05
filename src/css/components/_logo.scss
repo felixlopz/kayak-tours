@@ -7,6 +7,12 @@
       width: 40px;
     }
   }
+
+  &--footer {
+    @include respond(tab-port) {
+      width: 100px;
+    }
+  }
 }
 
 .logo-text {
@@ -17,5 +23,10 @@
   font-size: 3rem;
   @include respond(phone-small) {
     font-size: 2rem;
+  }
+
+  &--footer {
+    margin-top: 1em;
+    margin-left: -0.3em;
   }
 }

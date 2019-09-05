@@ -35,15 +35,15 @@
         transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
     }
+
+    &--footer {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   // navigation item
   &__item {
-    @include respond(tab-port) {
-      padding: 0.5em 1.2em;
-      font-weight: $regular;
-    }
-
     &:not(:last-child) {
       margin-right: 3em;
 
@@ -55,9 +55,21 @@
         margin-bottom: 2.5em;
       }
       @include respond(phone-small) {
-        margin-right: 0;
         margin-bottom: 1.5em;
       }
+    }
+
+    &--footer {
+      &:not(:last-child) {
+        @include respond(tab-port) {
+          margin-bottom: 1em;
+        }
+      }
+    }
+
+    @include respond(tab-port) {
+      padding: 0.5em 1.2em;
+      font-weight: $regular;
     }
   }
 
@@ -112,6 +124,25 @@
       &:hover,
       &:focus {
         opacity: 0.5;
+      }
+    }
+
+    &--footer {
+      &,
+      &:active,
+      &:focus {
+        font-size: 3.6rem;
+        font-weight: $bold;
+        transition: opacity 0.3s;
+        @include respond(tab-land) {
+          font-size: 2.4rem;
+        }
+      }
+      &::after {
+        display: none;
+      }
+      &:hover {
+        opacity: 0.6;
       }
     }
   }
