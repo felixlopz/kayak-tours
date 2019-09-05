@@ -37,8 +37,8 @@ body {
       background: transparent;
       width: 0;
       height: 0;
-      border-top: ($width-triangle - 0.5rem) solid transparent;
-      border-bottom: ($width-triangle - 0.5rem) solid transparent;
+      border-top: ($width-triangle - 0.3rem) solid transparent;
+      border-bottom: ($width-triangle - 0.3rem) solid transparent;
       left: -3rem;
       top: 50%;
       transform: translateY(-50%);
@@ -52,9 +52,9 @@ body {
     }
   }
   &--white {
-    color: $color-blue-white;
+    color: $color-white;
     &::before {
-      border-left: $width-triangle solid $color-blue-white;
+      border-left: $width-triangle solid $color-white;
     }
   }
   &--secondary {

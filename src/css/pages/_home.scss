@@ -194,3 +194,65 @@
     }
   }
 }
+
+.contact {
+  margin-top: 7.5em;
+  padding: 3.625rem 0;
+  background: $color-blue-darker;
+
+  background-image: linear-gradient(
+      to right,
+      rgba($color-blue-darker, 0.95),
+      rgba($color-blue-darker, 0.95)
+    ),
+    url("../assets/contact-bg.png");
+
+  background-position: center;
+  background-size: cover;
+  color: $color-white;
+
+  &__get-in-touch {
+    font-size: 3.6rem;
+    font-weight: $medium;
+    color: $color-primary-light;
+    text-transform: capitalize;
+    margin-bottom: 1em;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    font-size: 4.8rem;
+    font-weight: $bold;
+    margin-bottom: 5.8rem;
+    text-transform: uppercase;
+  }
+
+  &__direction {
+    list-style: none;
+  }
+  &__direction-item {
+    font-size: 3.6rem;
+    font-weight: $medium;
+    &--primary {
+      color: $color-primary-light;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  &__social-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    width: 100%;
+  }
+}

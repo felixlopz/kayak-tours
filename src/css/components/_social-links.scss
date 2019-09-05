@@ -1,0 +1,32 @@
+.social-links {
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    background-color: $color-white;
+    color: $color-blue-darker;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+
+    &:hover {
+      background-color: $color-blue-dark;
+      color: $color-white;
+    }
+  }
+
+  &__link {
+    font-size: 4rem;
+    color: inherit;
+  }
+}

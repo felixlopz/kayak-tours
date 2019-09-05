@@ -1,0 +1,107 @@
+.form {
+  $input-width: 45.8rem;
+  $input-padding: 1.3rem 1.8rem;
+  color: $color-white;
+  &__group {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 2.2em;
+    }
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: $input-width;
+    color: inherit;
+    font-size: 2rem;
+    font-weight: $medium;
+    padding: $input-padding;
+    border-radius: 4px;
+    background-color: $color-blue-dark;
+    border: 0;
+    outline: 0;
+    caret-color: $color-primary-dark;
+    transition: all 0.3s;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: $input-padding;
+    font-weight: $medium;
+    font-size: 2rem;
+    transition: all 0.3s;
+  }
+
+  &__input[required] + &__label::after {
+    content: "*";
+    margin-left: 0.5rem;
+    color: $color-secondary-light;
+  }
+
+  &__input:not(:placeholder-shown) + &__label,
+  &__input:focus + &__label {
+    font-size: 75%;
+    transform: translateY(110%);
+  }
+
+  // select styles
+  &__custom-select {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.5rem;
+      background-color: $color-blue-darker;
+      top: 0;
+      height: 100%;
+      right: 13%;
+      transform: translateX(13%);
+      z-index: 2;
+    }
+  }
+
+  &__custom-select > &__label {
+    font-size: 75%;
+    transform: translateY(110%);
+  }
+
+  &__select-icon {
+    position: absolute;
+    color: $color-primary-light;
+    font-size: 2rem;
+    pointer-events: none;
+    top: 50%;
+    right: 5%;
+    transform: translate(5%, -50%);
+    transition: all 0.3s;
+  }
+
+  // Text area style
+  &__textarea {
+    height: 15rem;
+  }
+  &__custom-textarea > &__label span {
+    color: $color-secondary-light;
+  }
+  &__textarea:not(:placeholder-shown) + &__label,
+  &__textarea:focus + &__label {
+    font-size: 75%;
+    transform: translateY(370%);
+  }
+  &__textarea[required] + &__label::after {
+    content: "*";
+    margin-left: 0.5rem;
+    color: $color-secondary-light;
+  }
+
+  &__group:last-child {
+    width: $input-width;
+
+    text-align: center;
+  }
+}
