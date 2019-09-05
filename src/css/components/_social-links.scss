@@ -23,10 +23,25 @@
       background-color: $color-blue-dark;
       color: $color-white;
     }
+
+    @include respond(tab-land) {
+      width: 5rem;
+      height: 5rem;
+    }
+    @include respond(phone-small) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 
   &__link {
     font-size: 4rem;
     color: inherit;
+    @include respond(tab-land) {
+      font-size: 2.5rem;
+    }
+    @include respond(phone-small) {
+      font-size: 2rem;
+    }
   }
 }

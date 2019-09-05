@@ -2,6 +2,11 @@
   $input-width: 45.8rem;
   $input-padding: 1.3rem 1.8rem;
   color: $color-white;
+
+  @include respond(tab-land) {
+    $input-width: 36.8rem;
+  }
+
   &__group {
     position: relative;
     &:not(:last-child) {
@@ -23,6 +28,10 @@
     outline: 0;
     caret-color: $color-primary-dark;
     transition: all 0.3s;
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
   }
 
   &__label {
@@ -33,6 +42,10 @@
     font-weight: $medium;
     font-size: 2rem;
     transition: all 0.3s;
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
   }
 
   &__input[required] + &__label::after {

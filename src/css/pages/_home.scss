@@ -91,6 +91,7 @@
 
   @include respond(tab-port) {
     padding: 3.5em 0;
+    margin-top: 0;
   }
 
   &__heading-box {
@@ -144,6 +145,7 @@
 
   @include respond(tab-port) {
     background: $color-blue-white;
+    margin-top: 0;
   }
 
   &__wrapper {
@@ -211,17 +213,47 @@
   background-size: cover;
   color: $color-white;
 
+  @include respond(tab-port) {
+    padding: 3.5em 0;
+    margin-top: 0;
+  }
+
+  &__heading-box {
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: center;
+
+      & > * {
+        margin: 0 0 1.5em 0;
+      }
+    }
+  }
+
   &__get-in-touch {
     font-size: 3.6rem;
     font-weight: $medium;
     color: $color-primary-light;
     text-transform: capitalize;
     margin-bottom: 1em;
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include respond(tab-port) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__form {
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__brand {
@@ -229,6 +261,15 @@
     font-weight: $bold;
     margin-bottom: 5.8rem;
     text-transform: uppercase;
+
+    @include respond(tab-land) {
+      font-size: 3.6rem;
+      margin-bottom: 4.2rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+      margin-bottom: 3.4rem;
+    }
   }
 
   &__direction {
@@ -246,6 +287,13 @@
     }
     &:not(:last-child) {
       margin-bottom: 2.6rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 2.4rem;
+    }
+    @include respond(tab-land) {
+      font-size: 1.8rem;
     }
   }
 
