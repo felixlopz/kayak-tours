@@ -9,6 +9,8 @@ import pin from "../assets/pin.png";
 import compass from "../assets/compass.png";
 import tag from "../assets/tag.png";
 
+import "../assets/favicon.png";
+
 // Main
 const tours = [
   {
