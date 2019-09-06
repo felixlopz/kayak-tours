@@ -15,16 +15,12 @@
   }
 
   &__box {
-    $grid-width: 114rem;
-    $box-position: -30%;
     z-index: 1;
     width: 46rem;
     position: relative;
     padding-bottom: 6.18em;
 
     @include respond(tab-land) {
-      $grid-width: 85rem;
-      $box-position: -15%;
       width: 38rem;
     }
 
@@ -40,12 +36,14 @@
       content: "";
       position: absolute;
       top: -40%;
-      width: calc(
-        100% + (#{$box-position} * -1) + ((100vw - #{$grid-width}) / 2)
-      );
+      width: calc(130% + ((100vw - 114rem) / 2));
       height: 140%;
       z-index: -1;
       background: $color-blue-darker;
+
+      @include respond(tab-land) {
+        width: calc(115% + ((100vw - 85rem) / 2));
+      }
 
       @include respond(tab-port) {
         display: none;
@@ -54,13 +52,19 @@
 
     &--right {
       &::before {
-        left: $box-position;
+        left: -30%;
+        @include respond(tab-land) {
+          left: -15%;
+        }
       }
     }
 
     &--left {
       &::before {
-        right: $box-position;
+        right: -30%;
+        @include respond(tab-land) {
+          right: -15%;
+        }
       }
     }
   }
@@ -169,7 +173,6 @@
 
   &__heading-box {
     @include respond(tab-port) {
-      $grid-width: 55rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -179,12 +182,17 @@
         content: "";
         position: absolute;
         top: 0;
-        left: calc((100vw - #{$grid-width} / 2) * -1);
-        right: calc((100vw - #{$grid-width} / 2) * -1);
+        left: calc(((100vw - 55rem) / 2) * -1);
+        right: calc(((100vw - 55rem) / 2) * -1);
         height: 100%;
         background: $color-blue-darker;
         border-bottom: 3rem solid $color-blue-dark;
         z-index: -1;
+
+        @include respond(phone) {
+          left: -1.5em;
+          right: -1.5em;
+        }
       }
     }
 
