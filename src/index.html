@@ -12,43 +12,66 @@
     />
     <title>Kayak Tours</title>
   </head>
-  <body>
+  <body style=" opacity: 0; transition: opaciy 0.5s ease-out;">
     <header class="header">
-      <div class="row">
-        <nav class="nav">
+      <nav class="nav">
+        <div class="nav__row row">
           <input class="nav__checkbox" type="checkbox" id="checkbox" />
           <div class="nav__background">&nbsp;</div>
-          <a href="#" class="nav__logo nav__link nav__link--logo">
-            <div class="logo-box logo-box--nav">
-              <img src="assets/logo.svg" alt="Kayak logo" />
+          <a href="#hero" class="nav__logo nav__link nav__link--logo">
+            <div class="logo">
+              <div class="logo__box logo__box--nav">
+                <svg
+                  class="logo__icon"
+                  width="257"
+                  height="292"
+                  viewBox="0 0 257 292"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M178.564 202.254C170.219 254.42 149.168 291.443 124.518 291.443C92.5512 291.443 66.6368 229.176 66.6368 152.367C66.6368 134.942 67.9704 118.266 70.4058 102.896L178.564 202.254ZM181.668 174.539C182.15 167.319 182.4 159.913 182.4 152.367C182.4 75.557 156.485 13.2905 124.518 13.2905C104.062 13.2905 86.0848 38.7876 75.7901 77.2767L181.668 174.539ZM97.1854 191.758C98.427 220.585 110.52 243.208 125.255 243.208C139.991 243.208 152.084 220.585 153.326 191.758H97.1854Z"
+                  />
+                  <path
+                    d="M51.1988 35.4674C57.7651 41.825 58.439 50.3214 60.5862 57.5259C63.3621 66.8396 66.04 74.7151 60.424 80.5284C54.7934 86.3568 46.938 83.8511 37.9275 80.9804C30.9991 78.773 23.1408 77.7804 16.5966 71.4442C1.54149 56.8677 -2.58877 36.6932 7.37139 26.3832C17.3315 16.0732 36.1437 20.891 51.1988 35.4674Z"
+                  />
+                  <path
+                    d="M205.321 246.219C198.533 240.099 197.558 231.632 195.156 224.508C192.052 215.299 189.096 207.524 194.502 201.514C199.922 195.489 207.862 197.714 216.968 200.262C223.971 202.222 231.859 202.934 238.624 209.034C254.187 223.066 259.031 243.081 249.443 253.739C239.855 264.396 220.884 260.251 205.321 246.219Z"
+                  />
+                  <path
+                    d="M35.9915 63.3672L41.9866 56.7504L203.952 203.828L197.957 210.445L35.9915 63.3672Z"
+                  />
+                </svg>
+              </div>
+              <div class="logo__text logo__text--nav">Kayak</div>
             </div>
-            <div class="logo-text logo-text--nav">Kayak</div>
           </a>
           <ul class="nav__list nav__list--header">
             <li class="nav__item nav__item--header">
-              <a href="#" class="nav__link nav__link--header">home</a>
+              <a href="#hero" class="nav__link nav__link--header">home</a>
             </li>
             <li class="nav__item nav__item--header">
-              <a href="#" class="nav__link nav__link--header">explore</a>
+              <a href="#explore" class="nav__link nav__link--header">explore</a>
             </li>
             <li class="nav__item nav__item--header">
-              <a href="#" class="nav__link nav__link--header">our tours</a>
+              <a href="#tours" class="nav__link nav__link--header">our tours</a>
             </li>
             <li class="nav__item nav__item--header">
-              <a href="#" class="nav__link nav__link--header">about us</a>
+              <a href="#about" class="nav__link nav__link--header">about us</a>
             </li>
             <li class="nav__item nav__item--header">
-              <a href="#" class="nav__link nav__link--header">contact</a>
+              <a href="#contact" class="nav__link nav__link--header">contact</a>
             </li>
           </ul>
           <label class="nav__label" for="checkbox">
             <span class="nav__icon"></span>
           </label>
-        </nav>
-      </div>
-      <div class="row header__row">
-        <div class="header__hero">
-          <h1 class="header__text">
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="hero" class="hero">
+        <div class="row hero__row">
+          <h1 class="hero__text">
             kayak takes<br />
             travel planning
           </h1>
@@ -56,10 +79,8 @@
             explore
           </button>
         </div>
-      </div>
-    </header>
-    <main>
-      <section class="explore row">
+      </section>
+      <section id="explore" class="explore row">
         <h1 class="heading heading--dark heading--primary">explore</h1>
         <div class="explore__wrapper">
           <div class="explore__intro-box">
@@ -173,13 +194,13 @@
           </div>
         </div>
       </section>
-      <section class="tours">
+      <section id="tours" class="tours">
         <div class="row tours__heading-box">
           <h1 class="heading heading--white heading--primary">Our Tours</h1>
         </div>
         <div class="tours__list row"></div>
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="row about__wrapper">
           <div class="about__heading-box">
             <h1 class="heading heading--secondary heading--primary">
@@ -196,7 +217,7 @@
           </p>
         </div>
       </section>
-      <section class="contact">
+      <section  id="contact" class="contact">
         <div class="row contact__row">
           <div class="contact__heading-box">
             <h1 class="heading heading--white heading--primary">
@@ -332,29 +353,51 @@
       </section>
       <footer class="footer">
         <div class="row footer__row">
-          <ul class="nav__list nav__list--footer">
-            <li class="nav__item nav__item--footer">
-              <a href="#" class="nav__link nav__link--footer">home</a>
-            </li>
-            <li class="nav__item nav__item--footer">
-              <a href="#" class="nav__link nav__link--footer">explore</a>
-            </li>
-            <li class="nav__item nav__item--footer">
-              <a href="#" class="nav__link nav__link--footer">tours</a>
-            </li>
-            <li class="nav__item nav__item--footer">
-              <a href="#" class="nav__link nav__link--footer">about</a>
-            </li>
-            <li class="nav__item nav__item--footer">
-              <a href="#" class="nav__link nav__link--footer">contact</a>
-            </li>
-          </ul>
-          <div class="footer__logo">
-            <div class="logo-box logo-box--footer">
-              <img src="assets/logo.svg" alt="Kayak logo" />
-            </div>
-            <div class="logo-text logo-text--footer">Kayak</div>
+          <div class="nav--footer">
+
+            <ul class="nav__list nav__list--footer">
+              <li class="nav__item nav__item--footer">
+                <a href="#hero" class="nav__link nav__link--footer">home</a>
+              </li>
+              <li class="nav__item nav__item--footer">
+                <a href="#explore" class="nav__link nav__link--footer">explore</a>
+              </li>
+              <li class="nav__item nav__item--footer">
+                <a href="#tours" class="nav__link nav__link--footer">tours</a>
+              </li>
+              <li class="nav__item nav__item--footer">
+                <a href="#about" class="nav__link nav__link--footer">about</a>
+              </li>
+              <li class="nav__item nav__item--footer">
+                <a href="#contact" class="nav__link nav__link--footer">contact</a>
+              </li>
+            </ul>
           </div>
+          <div class="logo logo--footer">
+              <div class="logo__box logo__box--footer">
+                <svg
+                  class="logo__icon logo__icon--footer"
+                  width="257"
+                  height="292"
+                  viewBox="0 0 257 292"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M178.564 202.254C170.219 254.42 149.168 291.443 124.518 291.443C92.5512 291.443 66.6368 229.176 66.6368 152.367C66.6368 134.942 67.9704 118.266 70.4058 102.896L178.564 202.254ZM181.668 174.539C182.15 167.319 182.4 159.913 182.4 152.367C182.4 75.557 156.485 13.2905 124.518 13.2905C104.062 13.2905 86.0848 38.7876 75.7901 77.2767L181.668 174.539ZM97.1854 191.758C98.427 220.585 110.52 243.208 125.255 243.208C139.991 243.208 152.084 220.585 153.326 191.758H97.1854Z"
+                  />
+                  <path
+                    d="M51.1988 35.4674C57.7651 41.825 58.439 50.3214 60.5862 57.5259C63.3621 66.8396 66.04 74.7151 60.424 80.5284C54.7934 86.3568 46.938 83.8511 37.9275 80.9804C30.9991 78.773 23.1408 77.7804 16.5966 71.4442C1.54149 56.8677 -2.58877 36.6932 7.37139 26.3832C17.3315 16.0732 36.1437 20.891 51.1988 35.4674Z"
+                  />
+                  <path
+                    d="M205.321 246.219C198.533 240.099 197.558 231.632 195.156 224.508C192.052 215.299 189.096 207.524 194.502 201.514C199.922 195.489 207.862 197.714 216.968 200.262C223.971 202.222 231.859 202.934 238.624 209.034C254.187 223.066 259.031 243.081 249.443 253.739C239.855 264.396 220.884 260.251 205.321 246.219Z"
+                  />
+                  <path
+                    d="M35.9915 63.3672L41.9866 56.7504L203.952 203.828L197.957 210.445L35.9915 63.3672Z"
+                  />
+                </svg>
+              </div>
+              <div class="logo__text logo__text--footer">Kayak</div>
+            </div>
           <span class="footer__credits">
             Built and designed by
             <a href="#" class="footer__link">Felix Armando</a> with inspiration
@@ -364,7 +407,7 @@
               target="_blank"
               class="footer__link"
               >Instagram Post </a
-            >.All rights reserved ©
+            >.</br>All rights reserved ©
           </span>
         </div>
       </footer>

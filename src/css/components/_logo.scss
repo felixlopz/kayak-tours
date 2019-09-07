@@ -1,32 +1,35 @@
-.logo-box {
-  width: 200px;
+.logo {
+  display: flex;
+  align-items: center;
 
-  &--nav {
-    width: 60px;
-    @include respond(phone-small) {
-      width: 40px;
+  &--footer {
+    color: $color-white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4em 0;
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: currentColor;
+
+    &--footer {
+      width: 20rem;
+      height: 20rem;
     }
   }
 
-  &--footer {
-    @include respond(tab-port) {
-      width: 100px;
+  &__text {
+    color: inherit;
+    font-size: 3rem;
+    font-weight: $bold;
+    text-transform: uppercase;
+    margin-left: 0.5em;
+    &--footer {
+      margin-top: 0.8em;
+      margin-left: -0.2em;
     }
-  }
-}
-
-.logo-text {
-  margin-left: 0.5em;
-  color: $color-white;
-  font-weight: $bold;
-  text-transform: uppercase;
-  font-size: 3rem;
-  @include respond(phone-small) {
-    font-size: 2rem;
-  }
-
-  &--footer {
-    margin-top: 1em;
-    margin-left: -0.3em;
   }
 }

@@ -22,7 +22,7 @@
     text-transform: capitalize;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: opacity 0.3s, background 0.3s;
   }
 
   &:hover,
