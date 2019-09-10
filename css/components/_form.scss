@@ -19,7 +19,7 @@
   &__textarea {
     width: $input-width;
     color: inherit;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: $medium;
     padding: $input-padding;
     border-radius: 4px;
@@ -40,7 +40,7 @@
     left: 0;
     padding: $input-padding;
     font-weight: $medium;
-    font-size: 2rem;
+    font-size: 1.6rem;
     transition: all 0.3s;
 
     @include respond(tab-land) {
@@ -57,7 +57,7 @@
   &__input:not(:placeholder-shown) + &__label,
   &__input:focus + &__label {
     font-size: 75%;
-    transform: translateY(110%);
+    transform: translateY(100%);
   }
 
   // select styles
@@ -80,7 +80,7 @@
 
   &__custom-select > &__label {
     font-size: 75%;
-    transform: translateY(110%);
+    transform: translateY(100%);
   }
 
   &__select-icon {
@@ -95,26 +95,45 @@
   }
 
   // Text area style
+  &__custom-textarea {
+    margin-top: 2em;
+  }
+
   &__textarea {
     height: 15rem;
   }
+
   &__custom-textarea > &__label span {
     color: $color-secondary-light;
   }
-  &__textarea:not(:placeholder-shown) + &__label,
-  &__textarea:focus + &__label {
+  &__textarea:not(:placeholder-shown) ~ &__label,
+  &__textarea:focus ~ &__label {
     font-size: 75%;
     transform: translateY(370%);
   }
+
   &__textarea[required] + &__label::after {
     content: "*";
     margin-left: 0.5rem;
     color: $color-secondary-light;
   }
 
+  &__counter {
+    opacity: 0;
+    font-size: 1.4rem;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    transition: opacity 0.3s;
+  }
+
+  &__textarea:not(:placeholder-shown) ~ &__counter,
+  &__textarea:focus ~ &__counter {
+    opacity: 1;
+  }
+
   &__group:last-child {
     width: $input-width;
-
     text-align: center;
   }
 }

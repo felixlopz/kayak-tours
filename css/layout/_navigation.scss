@@ -1,6 +1,15 @@
 .nav {
   animation: appear 0.8s;
 
+  @include respond(tab-port) {
+    position: relative;
+    width: 80%;
+
+    & .logo {
+      display: none;
+    }
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
@@ -12,17 +21,13 @@
     display: flex;
     list-style: none;
 
-    @include respond(tab-port) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      &--header {
-        opacity: 0;
+    &--header {
+      @include respond(tab-port) {
+        display: block;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        text-align: center;
+        opacity: 0;
+        height: 1%;
         width: 0;
         z-index: 3;
         left: -100%;
@@ -33,6 +38,10 @@
     &--footer {
       width: 100%;
       justify-content: space-between;
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 
@@ -152,28 +161,35 @@
   &__background {
     @include respond(tab-port) {
       display: block;
+      right: 0;
+      top: 1%;
+      width: 6.5rem;
+      height: 6.5rem;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
+      border-radius: 50%;
       background-image: linear-gradient(
         to bottom,
         $color-primary-light,
         $color-primary-dark
       );
-      z-index: 2;
-      transform: translateY(-100%);
+      z-index: -2;
       transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+      @include respond(phone-small) {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
     }
   }
 
   &__label {
     @include respond(tab-port) {
+      position: absolute;
       width: 6.5rem;
       height: 6.5rem;
+      right: 0;
+      top: 1%;
+      background: $color-primary-light;
       border-radius: 50%;
-      background: $color-blue-darker;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -231,7 +247,7 @@
 
   // background appear
   &__checkbox:checked ~ &__background {
-    transform: translateY(0);
+    transform: scale(80);
   }
 
   // icon transparent

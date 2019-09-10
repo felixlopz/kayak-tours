@@ -1,6 +1,9 @@
 /**
  //* Typography Styles
  */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
 body {
   font-size: $default-font-size;
   font-family: "Montserrat", sans-serif;
@@ -8,6 +11,7 @@ body {
 }
 
 .heading {
+  display: inline-block;
   $width-triangle: 2.5rem;
   &--primary {
     font-size: 4.8rem;

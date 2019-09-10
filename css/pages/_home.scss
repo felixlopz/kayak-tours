@@ -14,6 +14,15 @@
   flex-direction: column;
   justify-content: center;
 
+  &__row {
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   &__text {
     color: $color-white;
     font-size: 7.2rem;
@@ -40,11 +49,22 @@
 }
 
 .explore {
-  margin-top: 6em;
+  padding: 4.8em 0;
 
   @include respond(tab-port) {
-    text-align: center;
+    padding: 3.5em 0;
     margin-top: 0;
+  }
+
+  &__heading-box {
+    @include respond(tab-port) {
+      & > * {
+        margin: 0;
+      }
+
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__wrapper {
@@ -70,6 +90,7 @@
 
     @include respond(tab-port) {
       display: block;
+      margin-top: 3em;
     }
   }
 
@@ -187,10 +208,10 @@
   }
 
   &__wrapper {
-    padding: 5.25em 0;
+    padding: 4.8em 0;
 
     @include respond(tab-land) {
-      padding: 3.7em 0;
+      padding: 4em 0;
     }
     @include respond(tab-land) {
       padding: 3.7em 2em;
@@ -214,6 +235,11 @@
     font-weight: $medium;
     color: $color-blue;
     line-height: 35px;
+
+    @include respond(tab-port) {
+      padding: 3.5em 0;
+      margin-top: 0;
+    }
 
     @include respond(tab-land) {
       font-size: 2rem;
@@ -239,7 +265,6 @@
   margin-top: 7.5em;
   padding: 4.8em 0;
   background: $color-blue-darker;
-
   background-image: linear-gradient(
       to right,
       rgba($color-blue-darker, 0.95),
@@ -257,17 +282,13 @@
   }
 
   &__heading-box {
-    & > * {
-      margin-top: 0;
-    }
-
     @include respond(tab-port) {
+      & > * {
+        margin: 0;
+      }
+
       display: flex;
       justify-content: center;
-
-      & > * {
-        margin: 0 0 1.5em 0;
-      }
     }
   }
 
@@ -310,7 +331,7 @@
     }
     @include respond(tab-port) {
       font-size: 2.4rem;
-      margin-bottom: 3.4rem;
+      margin: 3em 0;
     }
   }
 
