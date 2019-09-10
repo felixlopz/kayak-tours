@@ -1,8 +1,14 @@
-# Kayak Tours Webpage
+# Kayak Tours
+
+Website of a company that offers kayak tours around the world.
+
+## [live Demo](https://kayaktours.netlify.com)
+
+## Features
+
+this website its fully responsive and is hosted at [netlify.com](https://www.netlify.com/), it also has a functional contact form using the netlify forms tool.
 
 ![thumbnail](thumbnail.png)
-
-## Things to be done for finishing the app
 
 ### Extends for this project
 
