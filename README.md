@@ -1,5 +1,7 @@
 # Kayak Tours Webpage
 
+![thumbnail](thumbnail.png)
+
 ## Things to be done for finishing the app
 
 ### Extends for this project
