@@ -2,7 +2,7 @@
 
 Website of a company that offers kayak tours around the world.
 
-## [live Demo](https://kayaktours.netlify.com)
+## [live Demo](https://kayaktours.felixlopez.tech)
 
 ## Features
 
